@@ -1,0 +1,11 @@
+openai
+pypdf
+langchain
+langchain-text-splitters
+langchain-community
+langchain-openai
+faiss-cpu
+sentence-transformers
+fastapi
+uvicorn
+FPDF

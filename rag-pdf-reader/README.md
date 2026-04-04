@@ -1,5 +1,7 @@
 # RAG PDF Reader 🤖📄
 
+![Chatbot Screenshot](backend/test-data/chatbot.png)
+
 A powerful Retrieval-Augmented Generation (RAG) system that allows you to chat with your PDF documents using AI. Upload PDFs and ask questions to get intelligent answers based on the document content.
 
 ![RAG PDF Reader](https://img.shields.io/badge/RAG-PDF--Reader-blue?style=for-the-badge)
@@ -159,13 +161,9 @@ rag-pdf-reader/
 │   ├── Dockerfile             # Backend container config
 │   ├── .env                   # Environment variables (create this)
 │   └── test-data/             # PDF storage and utilities
-│       ├── animals_database.txt          # Generated animal data
-│       ├── generate_animals_pdf.py       # PDF generation script
-│       ├── generate_animals_text.py      # Text generation script
-│       ├── ABCmouse-A-Z-Animal-Names-List.pdf
-│       ├── dinosaurs-by-d-k-publishing.pdf
-│       ├── Giant-Pandas.pdf
-│       └── wwf_tigers_e_1.pdf
+│       ├── animals_database.pdf          # Generated animal data PDF
+│       ├── Giant-Pandas.pdf              # Sample PDF file
+│       └── text-pdf.py                    # Text-to-PDF utility script
 ├── frontend/                  # React frontend
 │   ├── src/
 │   │   ├── App.js            # Main app component
@@ -204,19 +202,17 @@ REACT_APP_API_URL=http://localhost:8000
 
 ### Sample Data
 
-The project includes sample animal data and generation scripts in `backend/test-data/`:
+The project includes sample files and utilities in `backend/test-data/`:
 
-- **`animals_database.txt`** - Text file with 200 animals (Name, Living Places, Max Height, Max Weight, Food)
-- **`generate_animals_pdf.py`** - Script to create PDF from animal data
-- **`generate_animals_text.py`** - Script to generate animal text data
-- **Sample PDFs**: ABCmouse animals, dinosaurs, pandas, and tigers
+- **`animals_database.pdf`** - Generated animal data PDF
+- **`Giant-Pandas.pdf`** - Sample PDF file
+- **`text-pdf.py`** - Text-to-PDF utility script
 
 ### Generate More Test Data
 
 ```bash
 cd backend/test-data
-python generate_animals_text.py  # Creates animals_database.txt
-python generate_animals_pdf.py   # Creates animals_database.pdf (requires reportlab)
+python text-pdf.py  # Converts text content to PDF format
 ```
 
 ### Test Questions

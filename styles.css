@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+:root {
+  color-scheme: light;
+  font-family: 'IBM Plex Sans', sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(255, 205, 120, 0.45), transparent 35%),
+    linear-gradient(135deg, #f6efe5 0%, #e8f1ef 50%, #dfe8f7 100%);
+  color: #14213d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.chat-panel {
+  width: min(760px, 100%);
+  min-height: 78vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 20px;
+  padding: 28px;
+  border: 1px solid rgba(20, 33, 61, 0.12);
+  border-radius: 28px;
+  background: rgba(255, 252, 247, 0.78);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 24px 80px rgba(20, 33, 61, 0.12);
+}
+
+.hero h1 {
+  margin: 6px 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 0.95;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.72rem;
+  color: #b3541e;
+}
+
+.subtitle {
+  margin: 0;
+  max-width: 38rem;
+  color: #355070;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.message {
+  max-width: 85%;
+  padding: 16px 18px;
+  border-radius: 20px;
+  animation: rise 180ms ease-out;
+}
+
+.message p {
+  margin: 8px 0 0;
+}
+
+.message.assistant {
+  align-self: flex-start;
+  background: #fff8ef;
+  border: 1px solid rgba(179, 84, 30, 0.18);
+}
+
+.message.user {
+  align-self: flex-end;
+  background: #14342b;
+  color: #f8fffb;
+}
+
+.badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status {
+  margin: 0;
+  color: #5c677d;
+}
+
+.composer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+}
+
+.composer input {
+  min-width: 0;
+  padding: 16px 18px;
+  border: 1px solid rgba(20, 33, 61, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.composer button {
+  padding: 16px 22px;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #d8572a 0%, #f4a261 100%);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.composer button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    padding: 12px;
+  }
+
+  .chat-panel {
+    min-height: 100vh;
+    padding: 20px;
+    border-radius: 0;
+  }
+
+  .message {
+    max-width: 100%;
+  }
+
+  .composer {
+    grid-template-columns: 1fr;
+  }
+}

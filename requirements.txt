@@ -1,0 +1,27 @@
+fastapi==0.116.1
+uvicorn[standard]==0.35.0
+uv
+Faker
+
+# Database
+mysql-connector-python==8.3.0
+
+# LangChain + Vectorstore
+langchain==0.1.12
+faiss-cpu
+langchain-community==0.0.28
+
+# LLM support
+openai==1.13.3
+httpx==0.27.2
+
+# Environment variables
+python-dotenv==1.0.1
+
+# Text processing
+tiktoken==0.7.0
+transformers==4.51.3
+
+# Pydantic compatibility
+pydantic==2.6.1
+pydantic-settings==2.2.1

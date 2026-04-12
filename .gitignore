@@ -1,7 +1,5 @@
-rag-pdf-reader/backend/__pycache__/__init__.cpython-314.pyc
-rag-pdf-reader/__pycache__/api.cpython-314.pyc
-rag-pdf-reader/__pycache__/config.cpython-314.pyc
-rag-pdf-reader/backend/__pycache__/api.cpython-314.pyc
-rag-pdf-reader/backend/__pycache__/config.cpython-314.pyc
-rag-pdf-reader/backend/utils/__pycache__/pdf_reader.cpython-314.pyc
-rag-pdf-reader/backend/utils/__pycache__/rag_utils.cpython-314.pyc
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+dist/

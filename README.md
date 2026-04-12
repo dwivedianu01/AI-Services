@@ -1,28 +1,54 @@
-# AI-Services
+# Chatbot Demo
 
-A showcase repository for AI-focused solutions, examples, and mini-projects in multiple languages. This repo includes practical implementations for Python, Java, Node.js, React, and other modern stacks, all centered around AI, RAG, chatbots, data pipelines, and model-driven applications.
+Minimal full-stack chatbot demo with a Python backend and React frontend.
 
-## What You'll Find Here
+## Stack
 
-- AI and machine learning examples in **Python**
-- Backend and service integrations in **Java**
-- Full-stack AI demos with **Node.js** and **React**
-- Document AI and RAG (Retrieval-Augmented Generation) systems
-- Practical API and chatbot implementations
-- Hands-on code for modern AI workflows
+- Backend: FastAPI
+- Frontend: React + Vite
 
-## Why This Repo
+## Project structure
 
-This repo is designed to help developers discover real AI projects across languages and platforms. Each example is built to be easy to run, extend, and reuse in production or learning environments.
+```text
+backend/
+frontend/
+```
 
-## Main Focus Areas
+## Backend setup
 
-- **AI-powered chatbots**
-- **Document question answering**
-- **Multi-language examples**
-- **Containerized deployment with Docker**
-- **Real-world integrations with OpenAI and LangChain**
+```powershell
+cd backend
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
 
-## Keywords for GitHub Search
+Backend runs on `http://localhost:8000`.
 
-AI, AI examples, AI solutions, AI projects, Python AI, Java AI, Node.js AI, React AI, RAG, document chatbot, OpenAI, FastAPI, Docker
+Configure `backend/config.ini` before starting the backend. For OpenAI-compatible providers, set:
+
+```ini
+[OPENAI]
+api_key = your_provider_key
+base_url = https://your-openai-compatible-endpoint/v1
+chat_model = your-chat-model
+embedding_model = your-embedding-model
+```
+
+## Frontend setup
+
+Open a second terminal:
+
+```powershell
+cd frontend
+npm install
+npm run dev
+```
+
+Frontend runs on `http://localhost:5173`.
+
+## APIs
+
+- `GET /api/health`
+- `GET /api/chat?message=hello`

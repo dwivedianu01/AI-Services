@@ -1,9 +1,9 @@
 import os
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.embeddings import OpenAIEmbeddings
-from langchain.vectorstores import FAISS
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_openai import OpenAIEmbeddings
+from langchain_community.vectorstores import FAISS
 
-from .generate_schema_md import generate_schema_markdown
+from ..scripts.generate_schema_md import generate_schema_markdown
 from ..utils.config import settings
 
 

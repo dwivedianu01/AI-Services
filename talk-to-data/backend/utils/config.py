@@ -60,7 +60,6 @@ class Config:
         embedding_kwargs = {
             "openai_api_key": self.OPENAI_API_KEY,
             "model": self.OPENAI_EMBEDDING_MODEL,
-            "tiktoken_enabled": self.OPENAI_EMBEDDING_TIKTOKEN_ENABLED,
         }
 
         if self.OPENAI_BASE_URL:

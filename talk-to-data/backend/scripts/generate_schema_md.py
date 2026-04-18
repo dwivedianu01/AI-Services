@@ -1,5 +1,8 @@
 import mysql.connector
-from ..utils.config import settings
+try:
+    from utils.config import settings
+except ImportError:
+    from backend.utils.config import settings
 import os
 
 def generate_schema_markdown():

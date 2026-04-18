@@ -30,7 +30,7 @@ async def ask_chatbot(payload: dict):
 
     # ✅ 1. Get RAG context
     retriever = get_retriever()
-    context_docs = retriever.get_relevant_documents(question)
+    context_docs = retriever.invoke(question)
 
     context = "\n\n".join([doc.page_content for doc in context_docs])
 

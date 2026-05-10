@@ -34,6 +34,10 @@ Run the backend:
 ```bash
 uvicorn main:app --reload --port 8000
 ```
+##Example:
+```bash
+(.venv) PS C:\Users\dwive\AI-Python\AI-Services\grammerly-ai-assistant\backend> python -m uvicorn main:app --reload --port 8000
+```
 
 ### Frontend Setup
 
